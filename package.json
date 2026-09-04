@@ -1,0 +1,25 @@
+{
+  "name": "maic-for-office",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Office for Obsidian — view .docx / .pptx / .xlsx attachments in Obsidian (read-only, fully local)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aqu-Lab/maic-for-office.git"
+  },
+  "engines": {
+    "node": ">=22.12.0",
+    "npm": ">=10"
+  },
+  "workspaces": [
+    "apps/obsidian-plugin",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @genoffice/obsidian-plugin",
+    "dev": "npm run dev -w @genoffice/obsidian-plugin",
+    "test": "npm run test -w @genoffice/obsidian-plugin",
+    "typecheck": "npm run typecheck -w @genoffice/obsidian-plugin"
+  }
+}

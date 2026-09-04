@@ -1,0 +1,355 @@
+/* Office Viewer — Obsidian plugin styles.
+   Document surfaces stay light in dark themes ("dark chrome, white paper",
+   same rule as the GenOffice apps): the paper/slide/sheet is white, only the
+   surrounding chrome follows Obsidian's theme variables. */
+
+.office-viewer-root {
+  overflow: auto;
+  height: 100%;
+  padding: 0;
+}
+
+.office-viewer-content {
+  /* fixed height so the pptx/xlsx flex layouts can't be stretched by tall siblings */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.office-viewer-status {
+  margin: auto;
+  padding: 24px;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.office-viewer-error .office-viewer-status,
+.office-viewer-error {
+  color: var(--text-error);
+}
+
+/* ── docx paper ── */
+
+.ovx-docx {
+  flex: 1;
+  background: var(--background-secondary);
+  padding: 24px 16px 48px;
+  font-family: var(--ovx-base-font, system-ui, sans-serif);
+  font-size: var(--ovx-base-size, 14.7px);
+  color: var(--ovx-base-color, #1f2328);
+}
+
+.ovx-paper {
+  position: relative;
+  max-width: 816px; /* US Letter @96dpi; A4 (794px) docs simply get wider margins */
+  margin: 0 auto;
+  background: #ffffff;
+  color: #1f2328;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  padding: 96px 96px 96px;
+}
+
+.ovx-header,
+.ovx-footer {
+  color: #5f6570;
+  font-size: 0.85em;
+}
+
+.ovx-header {
+  position: absolute;
+  top: 36px;
+  left: 96px;
+  right: 96px;
+}
+
+.ovx-footer {
+  position: absolute;
+  bottom: 36px;
+  left: 96px;
+  right: 96px;
+  border-top: 1px solid #e2e4e8;
+  padding-top: 4px;
+}
+
+.ovx-body {
+  min-height: 400px;
+}
+
+.ovx-para {
+  margin: 0;
+  min-height: 1em;
+}
+
+.ovx-para + .ovx-para {
+  margin-top: var(--ovx-para-gap, 0px);
+}
+
+.ovx-h {
+  margin-top: 0.6em;
+}
+
+.ovx-h1 { font-size: 1.9em; }
+.ovx-h2 { font-size: 1.55em; }
+.ovx-h3 { font-size: 1.3em; }
+.ovx-h4 { font-size: 1.15em; }
+.ovx-h5 { font-size: 1.05em; }
+.ovx-h6 { font-size: 1em; }
+
+.ovx-li-marker {
+  display: inline-block;
+  text-align: right;
+  padding-right: 6px;
+}
+
+.ovx-link {
+  color: #0563c1;
+  text-decoration: underline;
+}
+
+.ovx-math {
+  font-family: 'Cambria Math', 'STIX Two Math', serif;
+  font-style: italic;
+}
+
+.ovx-note-ref {
+  color: #0563c1;
+  font-size: 0.75em;
+}
+
+.ovx-image-block {
+  margin: 6px 0;
+}
+
+.ovx-image-block img {
+  display: inline-block;
+}
+
+.ovx-toc-line {
+  color: #1f2328;
+}
+
+.ovx-page-break {
+  border-top: 1px dashed #c9ccd2;
+  margin: 24px 0;
+  position: relative;
+}
+
+.ovx-rule {
+  border-top: 1px solid #444;
+  margin: 8px 0;
+}
+
+.ovx-textbox {
+  border: 1px solid #b6bcc6;
+  border-radius: 2px;
+  padding: 6px 10px;
+  margin: 8px 0;
+  background: #fbfbfc;
+  max-width: 100%;
+}
+
+.ovx-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 4px 0;
+  padding: 3px 10px;
+  border: 1px solid #c9ccd2;
+  border-radius: 10px;
+  background: #f2f3f5;
+  color: #454a52;
+  font-size: 0.85em;
+}
+
+.ovx-chip-preview {
+  color: #6b7280;
+  max-width: 480px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ovx-broken-image {
+  display: inline-block;
+  border: 1px dashed #c9ccd2;
+  color: #8a9099;
+  padding: 12px 16px;
+  margin: 4px 0;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.ovx-table {
+  border-collapse: collapse;
+  margin: 8px 0;
+}
+
+.ovx-td {
+  border: 1px solid #c9ccd2;
+  padding: 4px 8px;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+/* ── pptx view ── */
+
+.ovx-pptx {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  min-height: 0;
+  background: var(--background-secondary);
+}
+
+.ovx-pptx-sidebar {
+  width: 150px;
+  overflow-y: auto;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-right: 1px solid var(--background-modifier-border);
+  flex-shrink: 0;
+}
+
+.ovx-pptx-thumb {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.ovx-pptx-thumb.ovx-active {
+  border-color: var(--interactive-accent);
+}
+
+.ovx-pptx-thumb-no {
+  position: absolute;
+  left: 4px;
+  bottom: 2px;
+  font-size: 10px;
+  color: #666;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0 3px;
+  border-radius: 3px;
+}
+
+.ovx-pptx-main {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.ovx-pptx-stage {
+  background: #fff;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+/* ── xlsx view ── */
+
+.ovx-xlsx {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--background-primary);
+}
+
+.ovx-xlsx-tabs {
+  display: flex;
+  gap: 2px;
+  padding: 4px 8px 0;
+  border-bottom: 1px solid var(--background-modifier-border);
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+
+.ovx-xlsx-tab {
+  border: 1px solid transparent;
+  border-bottom: none;
+  padding: 4px 12px;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.ovx-xlsx-tab.ovx-active {
+  background: var(--background-primary);
+  border-color: var(--background-modifier-border);
+  color: var(--text-normal);
+  font-weight: 600;
+}
+
+.ovx-xlsx-scroll {
+  flex: 1;
+  overflow: auto;
+}
+
+.ovx-xlsx table {
+  border-collapse: collapse;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.ovx-xlsx th {
+  position: sticky;
+  background: var(--background-secondary);
+  color: var(--text-muted);
+  font-weight: 500;
+  border: 1px solid var(--background-modifier-border);
+  padding: 2px 8px;
+  min-width: 84px;
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ovx-xlsx thead th {
+  top: 0;
+  z-index: 2;
+}
+
+.ovx-xlsx tbody th {
+  left: 0;
+  z-index: 1;
+  min-width: 44px;
+  text-align: center;
+}
+
+.ovx-xlsx thead th:first-child {
+  left: 0;
+  z-index: 3;
+}
+
+.ovx-xlsx td {
+  border: 1px solid var(--background-modifier-border);
+  padding: 2px 8px;
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ovx-xlsx td.ovx-num {
+  text-align: right;
+}
+
+.ovx-xlsx-meta {
+  padding: 4px 10px;
+  color: var(--text-faint);
+  font-size: 11px;
+  flex-shrink: 0;
+}

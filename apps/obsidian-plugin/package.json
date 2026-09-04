@@ -1,0 +1,35 @@
+{
+  "name": "@genoffice/obsidian-plugin",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "description": "Obsidian plugin: view .docx / .pptx / .xlsx attachments in the vault using the GenOffice engine packages (read-only)",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "dev": "node esbuild.config.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@genoffice/docx-engine": "*",
+    "@genoffice/pptx-engine": "*",
+    "@genoffice/pptx-render": "*",
+    "konva": "^9.3.20",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-konva": "^19.0.10",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "esbuild": "^0.25.0",
+    "jsdom": "^28.1.0",
+    "obsidian": "^1.13.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
+  }
+}

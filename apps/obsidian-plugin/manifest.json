@@ -1,0 +1,9 @@
+{
+  "id": "maic-for-office",
+  "name": "Office for Obsidian",
+  "version": "0.1.1",
+  "minAppVersion": "1.5.0",
+  "description": "Preview Word (.docx), PowerPoint (.pptx) and Excel (.xlsx) attachments right inside Obsidian. Fully local, read-only.",
+  "author": "Aqu-Lab",
+  "isDesktopOnly": true
+}
