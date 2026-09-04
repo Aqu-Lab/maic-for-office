@@ -4,6 +4,6 @@
   "version": "0.1.0",
   "minAppVersion": "1.5.0",
   "description": "View .docx, .pptx and .xlsx attachments in your vault — Word documents, slide decks and spreadsheets rendered locally by the GenOffice engines.",
-  "author": "LJYSkywalker",
+  "author": "Aqu-Lab",
   "isDesktopOnly": true
 }

@@ -42,9 +42,9 @@ npm run test   -w @genoffice/obsidian-plugin   # 管线冒烟测试（docx/pptx/
    {
      "id": "maic-for-office",
      "name": "Office for Obsidian",
-     "author": "LJYSkywalker",
+     "author": "Aqu-Lab",
      "description": "View .docx, .pptx and .xlsx attachments in your vault — Word documents, slide decks and spreadsheets rendered locally by the GenOffice engines.",
-     "repo": "LJYSkywalker/maic-for-office"
+     "repo": "Aqu-Lab/maic-for-office"
    }
    ```
 
