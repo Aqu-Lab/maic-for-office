@@ -38,7 +38,11 @@ jobs:
           fi
 
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund
+        run: npm install --no-audit --no-fund
+        env:
+          # lockfile records all-platform esbuild binaries; CI only needs linux-x64
+          npm_config_os: linux
+          npm_config_cpu: x64
 
       - name: Build plugin
         working-directory: apps/obsidian-plugin
