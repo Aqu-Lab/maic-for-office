@@ -19,8 +19,8 @@
 
 ```bash
 npm install
-npm run build -w @genoffice/obsidian-plugin    # 产出 dist/{main.js,manifest.json,styles.css}
-npm run test   -w @genoffice/obsidian-plugin   # 管线冒烟测试（docx/pptx/xlsx）
+npm run build -w @maic/obsidian-plugin    # 产出 dist/{main.js,manifest.json,styles.css}
+npm run test   -w @maic/obsidian-plugin   # 管线冒烟测试（docx/pptx/xlsx）
 ```
 
 开发时自动安装：设置环境变量 `OBSIDIAN_TEST_VAULT` 指向测试 vault（或在 `package.json` 里加 `"officeViewer": { "testVault": "/path/to/vault" }`），`npm run build` / `npm run dev`（watch）会自动把产物拷进 `<vault>/.obsidian/plugins/maic-for-office/`，重载插件即可看到效果。
@@ -72,7 +72,7 @@ src/
         └── render/xlsx-table.ts
 ```
 
-引擎包（`@genoffice/docx-engine`、`@genoffice/pptx-engine`、`@genoffice/pptx-render`）以 workspace 源码直接进 esbuild。`node:*` 内置模块与 `obsidian` 保持 external——Obsidian 桌面版的 Electron renderer 在运行时提供。
+引擎包（`@maic/docx-engine`、`@maic/pptx-engine`、`@maic/pptx-render`）以 workspace 源码直接进 esbuild。`node:*` 内置模块与 `obsidian` 保持 external——Obsidian 桌面版的 Electron renderer 在运行时提供。
 
 ### 引擎来源
 

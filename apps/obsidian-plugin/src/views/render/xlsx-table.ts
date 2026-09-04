@@ -1,7 +1,7 @@
 /**
  * xlsx read-only table — SheetJS (Community Edition) parse → virtualized DOM table.
  *
- * The GenOffice Sheets app parses .xlsx through its Rust sidecar, which cannot ship
+ * The upstream Sheets app parses .xlsx through its Rust sidecar, which cannot ship
  * inside an Obsidian plugin; SheetJS CE covers values, formulas (cached results),
  * dates, and merged ranges, which is the fidelity bar for viewing. Cell styling is
  * out of scope for the first version.

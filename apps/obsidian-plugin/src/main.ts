@@ -1,6 +1,6 @@
 /**
  * Office Viewer — an Obsidian plugin that views .docx / .pptx / .xlsx attachments
- * with the GenOffice engine packages (parse in-process, read-only render).
+ * with the engine packages (parse in-process, read-only render).
  *
  * Each format gets its own ItemView type; registerExtensions maps the file
  * extension onto the view, so clicking an attachment in the vault opens it.

@@ -1,6 +1,6 @@
 /* Office Viewer — Obsidian plugin styles.
    Document surfaces stay light in dark themes ("dark chrome, white paper",
-   same rule as the GenOffice apps): the paper/slide/sheet is white, only the
+   same rule as the office apps): the paper/slide/sheet is white, only the
    surrounding chrome follows Obsidian's theme variables. */
 
 .office-viewer-root {

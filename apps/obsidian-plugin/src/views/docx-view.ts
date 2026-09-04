@@ -29,7 +29,7 @@ export class DocxView extends BaseOfficeView {
   }
 
   protected async renderInto(container: HTMLElement, bytes: Uint8Array, _file: TFile): Promise<void> {
-    const { parseDocx } = await import('@genoffice/docx-engine')
+    const { parseDocx } = await import('@maic/docx-engine')
     const doc = await parseDocx(bytes)
     container.empty()
     const root = container.createDiv('ovx-docx')

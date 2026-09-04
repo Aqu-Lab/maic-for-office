@@ -1,5 +1,5 @@
 /**
- * docx read-only renderer — ParsedDoc (block tree from @genoffice/docx-engine) → DOM.
+ * docx read-only renderer — ParsedDoc (block tree from @maic/docx-engine) → DOM.
  *
  * Scope: structured, Word-like preview. Paragraph/character styles (the parser already
  * flattens the basedOn chain into StyleInfo.display), lists with real numbering
@@ -21,8 +21,8 @@ import type {
   TableModel,
   TableLook,
   TableStyleDisplay,
-} from '@genoffice/docx-engine'
-import { metafileToDataUrl } from '@genoffice/docx-engine/metafile'
+} from '@maic/docx-engine'
+import { metafileToDataUrl } from '@maic/docx-engine/metafile'
 
 const PX_PER_TWIP = 96 / 1440
 const PX_PER_HALF_POINT = 96 / 144

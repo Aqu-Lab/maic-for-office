@@ -1,6 +1,6 @@
 import { TFile, WorkspaceLeaf } from 'obsidian'
-import { openPptx, type OpenedPptx } from '@genoffice/pptx-engine'
-import { buildRenderSlide, HeuristicMetrics, type RenderSlide } from '@genoffice/pptx-render'
+import { openPptx, type OpenedPptx } from '@maic/pptx-engine'
+import { buildRenderSlide, HeuristicMetrics, type RenderSlide } from '@maic/pptx-render'
 import { BaseOfficeView } from './base-view'
 import { makeMediaResolver } from './render/pptx/media-resolver'
 import { mountPptxReader } from './pptx-canvas'

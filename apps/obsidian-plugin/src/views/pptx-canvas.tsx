@@ -9,7 +9,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Stage, Layer, Rect } from 'react-konva'
-import type { RenderFill, RenderNode, RenderSlide } from '@genoffice/pptx-render'
+import type { RenderFill, RenderNode, RenderSlide } from '@maic/pptx-render'
 import { fillToKonva } from './render/pptx/konva-adapter'
 import { StaticNode } from './render/pptx/NodeBody'
 import { createImageLoader } from './render/pptx/image-loader'

@@ -38,8 +38,8 @@
 
 ```bash
 npm install
-npm run build -w @genoffice/obsidian-plugin   # 产物：apps/obsidian-plugin/dist/
-npm run test  -w @genoffice/obsidian-plugin   # 冒烟测试
+npm run build -w @maic/obsidian-plugin   # 产物：apps/obsidian-plugin/dist/
+npm run test  -w @maic/obsidian-plugin   # 冒烟测试
 ```
 
 设置环境变量 `OBSIDIAN_TEST_VAULT` 后，构建会自动安装到该 vault 并支持 `--watch` 增量构建。
@@ -84,8 +84,8 @@ Once listed in the community plugin directory, it will be installable directly f
 
 ```bash
 npm install
-npm run build -w @genoffice/obsidian-plugin   # output: apps/obsidian-plugin/dist/
-npm run test  -w @genoffice/obsidian-plugin   # smoke tests
+npm run build -w @maic/obsidian-plugin   # output: apps/obsidian-plugin/dist/
+npm run test  -w @maic/obsidian-plugin   # smoke tests
 ```
 
 Set the `OBSIDIAN_TEST_VAULT` environment variable and builds auto-install into that vault, with `--watch` incremental rebuilds supported.

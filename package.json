@@ -17,9 +17,9 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build -w @genoffice/obsidian-plugin",
-    "dev": "npm run dev -w @genoffice/obsidian-plugin",
-    "test": "npm run test -w @genoffice/obsidian-plugin",
-    "typecheck": "npm run typecheck -w @genoffice/obsidian-plugin"
+    "build": "npm run build -w @maic/obsidian-plugin",
+    "dev": "npm run dev -w @maic/obsidian-plugin",
+    "test": "npm run test -w @maic/obsidian-plugin",
+    "typecheck": "npm run typecheck -w @maic/obsidian-plugin"
   }
 }

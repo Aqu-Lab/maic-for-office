@@ -7,7 +7,7 @@
  * SVG exports is an editor-only nicety, skipped here), everything else becomes a
  * plain base64 data URL.
  */
-import type { OpenedPptx } from '@genoffice/pptx-engine'
+import type { OpenedPptx } from '@maic/pptx-engine'
 import { displayMime } from './media-mime'
 import { neutralizeJpegOrientation } from './jpeg-orientation'
 import { tiffToPngDataUrl } from './tiff-decode'

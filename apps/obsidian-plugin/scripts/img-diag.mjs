@@ -1,6 +1,6 @@
 /** Dev-only: inspect image blocks of a docx to find non-decodable dataUrls. */
 import { readFileSync } from 'node:fs'
-import { parseDocx } from '@genoffice/docx-engine'
+import { parseDocx } from '@maic/docx-engine'
 
 const path = process.argv[2]
 const bytes = new Uint8Array(readFileSync(path))
